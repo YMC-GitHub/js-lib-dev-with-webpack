@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YMC-GitHub/jsLib-dev-tool%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BC%1B%5BC%1B%5B%1B%5BC%1B%5BC%1B%5BC%1B%5BC%1B%5BC%1B%5BC%1B%5BC%1B%5BC%1B%5B.git"
+    "url": "git@github.com:YMC-GitHub/jsLib-dev-tool.git"
   },
   "keywords": [
     "js",
@@ -21,9 +21,9 @@
   "author": "Ymc hualei03042013@163.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/YMC-GitHub/jsLib-dev-tool%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BC%1B%5BC%1B%5B%1B%5BC%1B%5BC%1B%5BC%1B%5BC%1B%5BC%1B%5BC%1B%5BC%1B%5BC%1B%5B/issues"
+    "url": "git@github.com:YMC-GitHub/jsLib-dev-tool/issues"
   },
-  "homepage": "https://github.com/YMC-GitHub/jsLib-dev-tool%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BC%1B%5BC%1B%5B%1B%5BC%1B%5BC%1B%5BC%1B%5BC%1B%5BC%1B%5BC%1B%5BC%1B%5BC%1B%5B#readme",
+  "homepage": "git@github.com:YMC-GitHub/jsLib-dev-tool/#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.3",
