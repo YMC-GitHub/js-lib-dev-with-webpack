@@ -65,8 +65,7 @@ npm install --save-dev babel-plugin-transform-runtime@6.23.0
   "presets": [
     ["env", {
       "targets": {
-        "browsers": ["last 2 versions", "safari >= 7"],
-        "node": "current"
+        "browsers": "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
       }
     }]
   ]
