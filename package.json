@@ -1,6 +1,6 @@
 {
   "name": "jslib-dev-tool",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a tool for developing js library!",
   "main": "index.js",
   "scripts": {
