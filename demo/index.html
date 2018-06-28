@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>ImageValicationCodeByCanvas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <link rel="stylesheet" href="demo.css">
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+
+<body>
+    <div class="container box-shadow">
+        <input value="admin" placeholder="请输入账号"/>
+        <input type="password" value="1234567890" placeholder="请输入密码"/>
+        <canvas id="canvas" class="code-image"></canvas>
+        <input type="text" class="code-text" placeholder="请输入验证码" />
+    </div>
+    <script type="text/javascript" src="../dist/ymcCaptchaCode.umd.min.js"></script>
+    <script>
+    // 绘制图片
+    var imageCode = new window['ymcCaptchaCode'].default();
+    imageCode.draw();
+    console.log(imageCode.text); // 监听刷新
+    document.getElementById("canvas").onclick = function(e) {
+        e.preventDefault();
+        imageCode.draw();
+        console.log(imageCode.text);
+    };
+
+    var flag = false,ele = document.querySelector(".code-text");
+    //验证码输入框-失去焦点
+    ele.addEventListener('blur', function(e) { if (this.value) { codeNotice(this.value); } }, true);
+
+    //验证码输入框-按回车键
+    ele.addEventListener('keyup', function(e) { if (IsEnterKeyPress()) { codeNotice(this.value); } }, true);
+
+    function IsEnterKeyPress() {
+        var lKeyCode = (navigator.appname == "Netscape") ? event.which : event.keyCode;
+        console.log(lKeyCode);
+        if (lKeyCode == 13) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function codeNotice(str) {
+        str.toUpperCase() === imageCode.text ? removeClass(ele,'code-text-dark') : addClass(ele,'code-text-dark');
+    }
+
+    function hasClass(elements, cName) {
+        return !!elements.className.match(new RegExp("(\\s|^)" + cName + "(\\s|$)"));
+    };
+
+    function addClass(elements, cName) {
+        if (!hasClass(elements, cName)) {
+            elements.className += " " + cName;
+        };
+    };
+
+    function removeClass(elements, cName) {
+        if (hasClass(elements, cName)) {
+            elements.className = elements.className.replace(new RegExp("(\\s|^)" + cName + "(\\s|$)"), " ");
+        };
+    };
+    </script>
+</body>
+
+</html>

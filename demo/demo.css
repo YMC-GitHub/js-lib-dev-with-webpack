@@ -1,0 +1,145 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.html {
+    font-size: 56px;
+}
+
+.container {
+    width: 10rem;
+    text-align: center;
+    margin: 10rem auto;
+    background: rgba(240, 80, 90, .5);
+}
+
+input {
+    width: 100%;
+    line-height: 2rem;
+    height: 2rem;
+    outline: none;
+
+
+    color: #6a6f77;
+    margin-top: 0.5rem;
+    padding: 0 0.5rem;
+    vertical-align: middle;
+}
+
+
+.code-image,
+.code-text {
+    display: inline;
+
+    box-sizing: border-box;
+    height: 2rem;
+
+    margin: 0.5rem auto;
+
+
+    text-align: center;
+    line-height: 2rem;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.code-text-dark {
+    color: red;
+}
+
+.container,
+input,
+.code-image,
+.code-text {
+    border: .1rem solid rgba(240, 80, 90, 1);
+    border-radius: 1rem;
+}
+
+input:hover,
+.code-image:hover,
+.code-text:hover {
+    border: .1rem solid rgba(240, 80, 90, .5);
+}
+
+input:hover {
+    box-shadow: 0 0 0 .2rem yellow;
+}
+input:focus{
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: greenPulse;
+    -webkit-animation-duration: 2s;
+}
+
+
+/*  闪烁颜色  */
+
+@-webkit-keyframes greenPulse {
+    from {
+    	box-shadow: 0 0 0 .2rem hsla(60, 100%, 50%, 1);
+    }
+    50% {
+    	box-shadow: 0 0 0 .1rem hsla(60, 100%, 50%, .6);
+    }
+    to {
+    	box-shadow: 0 0 0 .2rem hsla(60, 100%, 50%, 1);
+
+    }
+}
+
+@-webkit-keyframes bluePulse {
+    from {
+        background-color: #007d9a;
+        -webkit-box-shadow: 0 0 9px #333;
+    }
+    50% {
+        background-color: #2daebf;
+        -webkit-box-shadow: 0 0 18px #2daebf;
+    }
+    to {
+        background-color: #007d9a;
+        -webkit-box-shadow: 0 0 9px #333;
+    }
+}
+
+
+@-webkit-keyframes magentaPulse {
+    from {
+        background-color: #630030;
+        -webkit-box-shadow: 0 0 9px #333;
+    }
+    50% {
+        background-color: #a9014b;
+        -webkit-box-shadow: 0 0 18px #a9014b;
+    }
+    to {
+        background-color: #630030;
+        -webkit-box-shadow: 0 0 9px #333;
+    }
+}
+
+
+/*  重复动画  */
+
+a.button {
+    -webkit-animation-iteration-count: infinite;
+}
+
+
+/*  动画名称、完成时间  */
+
+.greenPulse.button {
+    -webkit-animation-name: greenPulse;
+    -webkit-animation-duration: 3s;
+}
+
+.bluePulse.button {
+    -webkit-animation-name: bluePulse;
+    -webkit-animation-duration: 3s;
+}
+
+.magentaPulse.button {
+    -webkit-animation-name: magentaPulse;
+    -webkit-animation-duration: 3s;
+}

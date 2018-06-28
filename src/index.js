@@ -1,4 +1,5 @@
 ﻿import {randomNum,randomColor,drawBg,drawLine,drawPoint,drawText} from './helper.js';
+import {config}  from './config.js';
 
 let settings = {};
 settings.modules = {
