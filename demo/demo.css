@@ -143,3 +143,34 @@ a.button {
     -webkit-animation-name: magentaPulse;
     -webkit-animation-duration: 3s;
 }
+
+
+@font-face {
+  font-family: 'FEB';
+  src: url('http://www.akaru.fr/css/fonts/futurastd-extrabold-webfont.eot');
+  src: url('http://www.akaru.fr/css/fonts/futurastd-extrabold-webfont.eot?#iefix') format('embedded-opentype'), url('http://www.akaru.fr/css/fonts/futurastd-extrabold-webfont.woff') format('woff'), url('http://www.akaru.fr/css/fonts/futurastd-extrabold-webfont.ttf') format('truetype'), url('http://www.akaru.fr/css/fonts/futurastd-extrabold-webfont.svg#futura_stdextra_bold') format('svg');
+  font-weight: normal;
+  font-style: normal
+}
+  background: #ede6db;
+body {
+
+  height: 100%;
+  width: 100%;
+}
+
+div {
+  width: 1200px;
+  text-align: center;
+  margin: 25% auto;
+}
+
+span {
+  font: normal 45px/45px 'FEB';
+  font-size: 80px;
+  line-height: 80px;
+  color: #f1ebe5;
+  text-shadow: 0 13.36px 8.896px #c4b59d,0 -2px 1px #fff;
+  letter-spacing: -4px;
+  text-transform: uppercase;
+}

@@ -5,7 +5,6 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 
 const production = process.env.NODE_ENV === 'production';
 
-console.log(production);
 const externals = [];
 externals.push({
   lodash: {
