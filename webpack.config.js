@@ -5,7 +5,7 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 
 const production = process.env.NODE_ENV === 'production';
 
-
+console.log(production);
 const externals = [];
 externals.push({
   lodash: {
@@ -33,11 +33,16 @@ plugins.push(
   }),
   // 清理目录
   new CleanWebpackPlugin('dist'),
-  // 脚本压缩
-  new webpack.optimize.UglifyJsPlugin({
-    compress: production // minimize
-  })
+
 );
+if (production) {
+  plugins.push(
+    // 脚本压缩
+    new webpack.optimize.UglifyJsPlugin({
+      compress: production // minimize
+    })
+  );
+}
 
 
 module.exports = [{
