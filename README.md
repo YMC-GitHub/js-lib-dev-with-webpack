@@ -8,6 +8,22 @@
  - 语法转换
  - 接口转换
 
+### 一些命令
+
+```sh
+::<<eof
+#开发
+npm run build:dev
+
+#构建
+npm run build:pro
+
+#校验
+npm run lint:js
+eof
+
+```
+
 ### 建设记录
 
 若想知道是怎么建的请点击[这里](./HISTORY.md)
