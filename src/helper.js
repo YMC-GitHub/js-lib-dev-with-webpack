@@ -1,30 +1,31 @@
-﻿import {Text} from './Model/Text.js';
-import {Line} from './Model/Line.js';
-import {Point} from './Model/Point.js';
-import {Sence} from './Model/Sence.js';
+/* eslint-disable no-tabs */
+import { Line } from './Model/Line.js';
+import { Point } from './Model/Point.js';
+import { Sence } from './Model/Sence.js';
+import { Text } from './Model/Text.js';
 
-/**生成一个随机数**/
+/** 生成一个随机数* */
 export function randomNum(min, max) {
-	return Math.floor(Math.random() * (max - min) + min);
+  return Math.floor(Math.random() * (max - min) + min);
 }
-/**生成一个随机色**/
+/** 生成一个随机色* */
 export function randomColor(min, max) {
-	var r = randomNum(min, max);
-	var g = randomNum(min, max);
-	var b = randomNum(min, max);
-	return "rgb(" + r + "," + g + "," + b + ")";
+  const r = randomNum(min, max);
+  const g = randomNum(min, max);
+  const b = randomNum(min, max);
+  return `rgb(${r},${g},${b})`;
 }
-/**绘制一个背景图**/
+/** 绘制一个背景图* */
 export function drawBg(ctx, w, h) {
-	/*
+  /*
 	ctx.fillStyle = randomColor(180, 240);
 	ctx.fillRect(0, 0, w, h);
 	*/
-	(new Sence()).draw(ctx,w, h);
+  (new Sence()).draw(ctx, w, h);
 }
-/**绘制一批干扰线**/
+/** 绘制一批干扰线* */
 export function drawLine(ctx, w, h) {
-	/*
+  /*
 	for(let i = 0; i < 6; i++) {
 		ctx.strokeStyle = randomColor(40, 180);
 		ctx.beginPath();
@@ -33,11 +34,11 @@ export function drawLine(ctx, w, h) {
 		ctx.stroke();
 	}
 	*/
-	(new Line()).draw(ctx,w, h);
+  (new Line()).draw(ctx, w, h);
 }
-/**绘制一批干扰点**/
+/** 绘制一批干扰点* */
 export function drawPoint(ctx, w, h) {
-	/*
+  /*
 	for(let i = 0; i < 50; i++) {
 		ctx.fillStyle = randomColor(0, 255);
 		ctx.beginPath();
@@ -45,11 +46,11 @@ export function drawPoint(ctx, w, h) {
 		ctx.fill();
 	}
 	*/
-	(new Point()).draw(ctx,w, h);
+  (new Point()).draw(ctx, w, h);
 }
-/**绘制一批文字**/
+/** 绘制一批文字* */
 export function drawText(ctx) {
-	/*
+  /*
 	let str = 'ABCEFGHJKLMNPQRSTWXY123456789';
 	ctx.textBaseline = 'bottom';
 	for(let i = 0; i < 4; i++) {
@@ -68,5 +69,5 @@ export function drawText(ctx) {
 		ctx.translate(-x, -y);
 	}
 	*/
-	return (new Text()).draw(ctx);
+  return (new Text()).draw(ctx);
 }
