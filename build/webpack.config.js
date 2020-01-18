@@ -1,7 +1,7 @@
-const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
+const dirConfig = require('../config/dir.construtor');
 
 const production = process.env.NODE_ENV === 'production';
 
@@ -31,7 +31,7 @@ plugins.push(
     filename: 'manifest.json'
   }),
   // 清理目录
-  new CleanWebpackPlugin('../dist'),
+  new CleanWebpackPlugin(dirConfig.dist),
 
 );
 if (production) {
@@ -47,7 +47,7 @@ if (production) {
 module.exports = [{
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: dirConfig.dist,
     filename: production ? 'ymcCaptchaCode.umd.min.js' : 'ymcCaptchaCode.umd.js',
     library: 'ymcCaptchaCode',
     libraryTarget: 'umd'
