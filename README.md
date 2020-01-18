@@ -1,42 +1,33 @@
-### 基于webpack开发脚本类库
+# js-lib-dev-with-webpack
 
->查看基于此开发的一个类库[demo](https://ymc-github.github.io/jsLib-dev-tool/demo/index.html)
+## desc
 
-### 功能简介
+devlelop js lib with webpack
 
- - 类库规范
- - 语法转换
- - 接口转换
+## feat
 
-### 一些命令
+- lib module starndard
+- js syt transform
+- js apitransform
+
+
+## some command
 
 ```sh
-::<<eof
-#开发
+#dev
 npm run build:dev
 
-#构建
+#build
 npm run build:pro
 
-#校验
+#lint your js file
 npm run lint:js
-eof
-
 ```
 
-### 建设记录
+## author
 
-若想知道是怎么建的请点击[这里](./HISTORY.md)
+yemiancheng <ymc.github@gmail.com>
 
-### 更新内容
-添加打包忽略
+## LICNSE
 
-添加环境变量
-
-添加文件清单
-
-添加清理目录
-
-更新代码压缩
-
-更新指定路径
+MIT
