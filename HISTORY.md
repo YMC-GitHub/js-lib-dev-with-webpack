@@ -2,17 +2,17 @@
 
 ### 类库规范
 
-此处使用umd规范，使类库能够以浏览器,nodejs下运行，使其可以运行在amd，cmd和umd规范的类库环境中。[config](./webpack.config.js#L52-#L53)
+此处使用umd规范，使类库能够以浏览器,nodejs下运行，使其可以运行在amd，cmd和umd规范的类库环境中。[config](./build/webpack.config.js#L52-#L53)
 
-在umd规范时，需要设置导出的变量名。 [config](./webpack.config.js#L52-#L52)
+在umd规范时，需要设置导出的变量名。 [config](.build//webpack.config.js#L52-#L52)
 
 `设置配置`
 
-01.脚本入口文件 [config](./webpack.config.js#L48)
+01.脚本入口文件 [config](./build/webpack.config.js#L48)
 
-02.研发时脚本输出文件 [config](./webpack.config.js#L49-#L54)
+02.研发时脚本输出文件 [config](./build/webpack.config.js#L49-#L54)
 
-03.生产时脚本输出文件  [config](./webpack.config.js#L49-#L54)
+03.生产时脚本输出文件  [config](./build/webpack.config.js#L49-#L54)
 
 
 `安装依赖`
@@ -49,7 +49,7 @@ npm install --save-dev babel-loader@7.1.3
 
 `设置配置`
 
-01.以webpack的插件方式使用babel [config](./webpack.config.js#L58-#L60)
+01.以webpack的插件方式使用babel [config](.build//webpack.config.js#L58-#L60)
 
 02.告诉babel使用env预设
 
@@ -146,13 +146,13 @@ npm install --save-dev babel-plugin-transform-runtime@6.23.0
 
 如果某些包在production时已经通过其他方式或途径引入，则构建输出时忽略掉这些包，避免重复引入。比如lodash包，jquery包等。此处对lodash包进行处理。
 
-01.从输出的 bundle 中排除依赖loash [config](./webpack.config.js#L8-#L16)。
+01.从输出的 bundle 中排除依赖loash [config](.build//webpack.config.js#L8-#L16)。
 
 ### 环境变量
 
 在webpack编译的过程中，如果没有用到环境变量，可以不设置。
 
-01.设置环境变量NODE_ENV [config](./webpack.config.js#L21-#L25)。
+01.设置环境变量NODE_ENV [config](./build/webpack.config.js#L21-#L25)。
 
 
 ### 文件清单
@@ -166,7 +166,7 @@ npm install cwebpack-manifest-plugin@2.0.3 -save-dev
 
 `设置配置`
 
-01.添加文件清单映射插件及其配置 [config](./webpack.config.js#L29-#L31)。
+01.添加文件清单映射插件及其配置 [config](./build/webpack.config.js#L29-#L31)。
 
 
 ### 清理目录
@@ -180,7 +180,7 @@ npm install clean-webpack-plugin@0.1.19 -save-dev
 
 `设置配置`
 
-01.添加清除资源文件插件及其配置 [config](./webpack.config.js#L34-#L34)。
+01.添加清除资源文件插件及其配置 [config](./build/webpack.config.js#L34-#L34)。
 
 
 
@@ -196,7 +196,7 @@ production时压缩脚本文件。
 
 `设置配置`
 
-01.添加js压缩插件及其配置 [config](./webpack.config.js#L39-#L42)。
+01.添加js压缩插件及其配置 [config](./build/webpack.config.js#L39-#L42)。
 
 ### 指定路径
 

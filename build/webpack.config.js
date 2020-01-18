@@ -31,7 +31,7 @@ plugins.push(
     filename: 'manifest.json'
   }),
   // 清理目录
-  new CleanWebpackPlugin('dist'),
+  new CleanWebpackPlugin('../dist'),
 
 );
 if (production) {
@@ -47,7 +47,7 @@ if (production) {
 module.exports = [{
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: production ? 'ymcCaptchaCode.umd.min.js' : 'ymcCaptchaCode.umd.js',
     library: 'ymcCaptchaCode',
     libraryTarget: 'umd'
