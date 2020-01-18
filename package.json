@@ -6,13 +6,16 @@
   "module": "src/index.js",
   "files": [
     "dist/ymcCaptchaCode.umd.min.js",
-    "src/index.js","package.json",
+    "src/index.js",
+    "package.json",
     "webpack.config.js",
     "README.md"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development webpack",
     "build:dev": "cross-env NODE_ENV=development webpack",
+    "build": "cross-env NODE_ENV=production webpack",
     "build:pro": "cross-env NODE_ENV=production webpack",
     "lint:js": "eslint src --fix"
   },
