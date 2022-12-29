@@ -48,7 +48,7 @@
     "cross-env": "^5.2.0",
     "eslint": "^6.1.0",
     "eslint-config-yemiancheng": "^1.0.0",
-    "webpack": "^3.12.0",
+    "webpack": "^5.75.0",
     "webpack-manifest-plugin": "^2.0.4"
   }
 }
